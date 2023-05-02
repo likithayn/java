@@ -1,0 +1,28 @@
+
+//parameterised constructor
+import java.util.*;
+class box{
+    int l,w,h;
+   
+    box(int x,int y,int z){
+        l=x;w=y;h=z;
+         System.out.println(l+""+w+""+h);
+    }
+    void vol(){
+    System.out.println(l*w*h);
+    }
+    	
+}
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner sc= new Scanner(System.in);
+    int x,y,z;
+	x=sc.nextInt();
+	y=sc.nextInt();
+	z=sc.nextInt();
+	box b=new box(x,y,z);
+	    b.vol();
+	}
+}
+         
