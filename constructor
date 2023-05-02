@@ -1,0 +1,27 @@
+
+import java.util.*;
+class box{
+    int l,w,h;
+    box(int l,int w,int h){
+        System.out.println(""+l+""+w+""+h);
+    }
+    double volume(){
+        return l*w*h;
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		
+	    double v;
+	    box b=new box();
+	    b.l=s.nextInt();
+	    b.w=s.nextInt();
+	    b.h=s.nextInt();
+	    v=b.volume();
+	    System.out.println("volume "+v); 
+	}
+}
+
+
