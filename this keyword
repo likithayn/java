@@ -1,0 +1,28 @@
+
+//this key word
+import java.util.*;
+class box{
+    int l,w,h;
+   
+    box(int l,int w,int h){
+        this.l=l;this.w=w;this.h=h;
+         System.out.println(l+""+w+""+h);
+    }
+    void vol(){
+    System.out.println(l*w*h);
+    }
+    	
+}
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner sc= new Scanner(System.in);
+    int x,y,z;
+	x=sc.nextInt();
+	y=sc.nextInt();
+	z=sc.nextInt();
+	box b=new box(x,y,z);
+	    b.vol();
+	}
+}
+         
