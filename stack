@@ -1,0 +1,75 @@
+
+import java.util.*;
+import java.lang.*;
+class stack
+{
+    Scanner sc=new Scanner(System.in);
+    int  s[],top=-1,size;
+    stack()
+    {
+    System.out.println("enter size");
+        size=sc.nextInt();
+        s=new int[size];
+       
+    }
+    void push()
+    {
+        if(top==size-1)
+             System.out.println("stack full");
+        else
+        {
+             System.out.println("enter stack element");
+             int elem=sc.nextInt();
+             s[++top]=elem;
+        }
+    }
+    void pop()
+    {
+        if(top==-1)
+             System.out.println("stack empty");
+        else
+        {
+             System.out.println("poped stack element "+s[top]);
+             top--;
+        }
+    }
+    void display()
+    {
+        System.out.println(" stack elements are ");
+        if(top!=-1)
+        for(int i=0;i<=top;i++)
+            System.out.println(s[i]);
+        else
+        System.out.println("empty");
+        
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		int ch;
+		Scanner sc=new Scanner(System.in);
+        	stack s=new stack();
+		for(;;)
+//do
+		{
+		    System.out.println("the choices are\n 1.push\n2.pop\n3.display\n4.exit\n");
+		    ch=sc.nextInt();
+	        switch(ch)
+	        {
+	            case 1:s.push();
+	                break;
+	           case 2:s.pop();
+	                break;
+	           case 3:s.display();
+	                break;
+	          case 4:System.exit(0);
+	          default:System.out.println("not valid choice");
+	        }
+	
+		}
+//while(1);
+	}
+}
+
+
