@@ -1,0 +1,40 @@
+
+
+import java.util.*;
+class box{
+    int l,w;
+  
+    void in(int l,int w){
+        this.l=l;this.w=w;
+         System.out.println(l+" "+w);
+         
+    }
+    	
+}
+class vol extends box{
+   
+   int h;
+    void show(int l,int w,int h)
+    {
+       this.h=h;this.l=l;this.w=w;
+        System.out.println(l+" "+w+""+h);
+            System.out.println(l*w*h);
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner sc= new Scanner(System.in);
+    int x,y,z;
+		x=sc.nextInt();
+	y=sc.nextInt();
+	box b=new box();
+	b.in(x,y);
+	vol v=new vol();
+	x=sc.nextInt();
+	y=sc.nextInt();
+	z=sc.nextInt();
+	v.show(x,y,z);
+	}
+}
+         
