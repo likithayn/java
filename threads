@@ -1,0 +1,45 @@
+import java.util.Random;//util package comsists of random class
+//using Thread Class
+class prg3b{
+    static int randomInteger;
+    public static void main(String[] args){
+        System.out.println("For 10 Random numbers");
+        MyThread1 thread1 = new MyThread1();
+        thread1.start();//start thread1
+    }
+}
+//Thread1
+class MyThread1 extends Thread{
+    public void run() {
+        int i = 0;
+        try {
+            //generating 10 random numbers
+            while(i<10) {
+                Random random = new Random();
+                prg3b.randomInteger = random.nextInt(10);
+                System.out.println((i+1)+" Random integer is "+prg3b.randomInteger);
+                new MyThread2().start();//start thread2
+                new MyThread3().start();//start thread3
+                Thread.sleep(1000*1);//delay for display of output
+                System.out.println("\n");
+                i++;
+            }
+        }
+        catch (InterruptedException exception) {
+            exception.printStackTrace();
+        }
+    }
+}
+//Thread2
+class MyThread2 extends Thread {
+    public void run() {
+        System.out.println("Square of "+prg3b.randomInteger + " is " +prg3b.randomInteger * prg3b.randomInteger );
+    }
+}
+//Thread3
+class MyThread3 extends Thread {
+    public void run() {
+        System.out.println("Cube of "+prg3b.randomInteger + " is " + prg3b.randomInteger * prg3b.randomInteger *
+                prg3b.randomInteger );
+    }
+}
